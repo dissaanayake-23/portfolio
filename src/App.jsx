@@ -79,7 +79,7 @@ function App() {
             </a>
 
             <a
-              href="/Jayamini Dissanayake.pdf"
+              href="/Jayamini__Dissanayake.pdf"
               download
               className="px-7 py-3 bg-blue-500 rounded-full hover:bg-blue-600 transition"
             >
