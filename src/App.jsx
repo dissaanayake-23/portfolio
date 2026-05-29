@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { useState } from "react";
+import { FaGraduationCap } from "react-icons/fa";
+import { FaSchool } from "react-icons/fa";
 function App() {
   const [showCradleMore, setShowCradleMore] = useState(false);
   const [showTrafficMore, setShowTrafficMore] = useState(false);
@@ -39,6 +41,13 @@ function App() {
     >
       About
     </a>
+
+    <a
+  href="#education"
+  className="hover:text-blue-400 hover:scale-110 hover:drop-shadow-[0_0_10px_#60a5fa] transition-all duration-300"
+>
+  Education
+</a>
 
     <a
       href="#projects"
@@ -127,7 +136,7 @@ function App() {
       </a>
 
       <a
-        href="/Jayamini_Dissanayake.pdf"
+        href="/Jayamini_Dissanayake_Resume.pdf"
         download
         className="px-7 py-3 bg-blue-500 rounded-full hover:bg-blue-600 hover:scale-110 transition-all duration-300"
       >
@@ -191,6 +200,81 @@ function App() {
 
   </div>
 </motion.section>
+{/* Education Section */}
+<section id="education" className="px-10 py-24">
+  <div className="max-w-6xl mx-auto">
+
+    {/* Section Title */}
+    <div className="flex justify-center mb-20">
+      <motion.h2
+        initial={{ opacity: 0, x: -300 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{
+          duration: 0.5,
+          type: "spring",
+          stiffness: 50,
+        }}
+        viewport={{ once: true }}
+        className="text-5xl font-bold px-12 py-5 bg-[#0f172a] border border-gray-700 rounded-3xl"
+      >
+        Education
+      </motion.h2>
+    </div>
+
+    {/* Education Cards */}
+    <div className="max-w-4xl mx-auto space-y-6">
+
+      <motion.div
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+  className="bg-[#0f172a] border border-gray-700 rounded-2xl p-6 shadow-lg hover:shadow-blue-500/20 hover:scale-[1.02] transition-all duration-300"
+>
+  <div className="flex items-center gap-3 mb-3">
+    <FaGraduationCap className="text-blue-400 text-3xl" />
+    <h3 className="text-2xl font-semibold text-white">
+      BSc (Hons) in Computer Systems Engineering
+    </h3>
+  </div>
+
+  <p className="text-blue-300 mt-2">
+    Sri Lanka Institute of Information Technology (SLIIT)
+  </p>
+
+  <p className="text-gray-400 mt-2">
+    2023 - 2027
+  </p>
+</motion.div>
+
+      {/* A/L */}
+    <motion.div
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.2 }}
+  viewport={{ once: true }}
+  className="bg-[#0f172a] border border-gray-700 rounded-2xl p-6 shadow-lg hover:shadow-blue-500/20 hover:scale-[1.02] transition-all duration-300"
+>
+  <div className="flex items-center gap-3 mb-3">
+    <FaSchool className="text-blue-400 text-3xl" />
+    <h3 className="text-2xl font-semibold text-white">
+      G.C.E. Advanced Level
+    </h3>
+  </div>
+
+  <p className="text-blue-300 mt-2">
+    Physical Science Stream
+  </p>
+
+  <p className="text-gray-400 mt-2">
+    2022 - 2023
+  </p>
+</motion.div>
+
+    </div>
+
+  </div>
+</section>
 
       {/* Projects Section */}
 <section
