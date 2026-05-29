@@ -1,132 +1,219 @@
+import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
+import { useState } from "react";
 function App() {
+  const [showCradleMore, setShowCradleMore] = useState(false);
+  const [showTrafficMore, setShowTrafficMore] = useState(false);
+  const [showModulationMore, setShowModulationMore] = useState(false);
+  const [showPharmacyMore, setShowPharmacyMore] = useState(false);
+  const [showNetworkMore, setShowNetworkMore] = useState(false);
+  const [showResearchMore, setShowResearchMore] = useState(false);
+  const [showAMMore, setShowAMMore] = useState(false);
+  const [showAdaptiveMore, setShowAdaptiveMore] = useState(false);
+  const [showCounterMore, setShowCounterMore] = useState(false);
+  const [showPIDMore, setShowPIDMore] = useState(false);
+  const [showCarMore, setShowCarMore] = useState(false);
+  const [showZabbixMore, setShowZabbixMore] = useState(false);
   return (
     <div className="min-h-screen bg-[#030b1b] text-white">
 
       {/* Navbar */}
-      <nav className="flex justify-center pt-6 sticky top-0 z-50">
+<motion.nav
+  initial={{ y: -50, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ duration: 0.8 }}
+  className="flex justify-center pt-6 sticky top-0 z-50"
+>
+  <div className="flex gap-8 bg-[#0f172a]/90 backdrop-blur-md border border-gray-700 px-8 py-4 rounded-full shadow-lg hover:shadow-blue-500/20 hover:scale-105 transition-all duration-500">
 
-        <div className="flex gap-8 bg-[#0f172a]/90 backdrop-blur-md border border-gray-700 px-8 py-4 rounded-full shadow-lg">
+    <a
+      href="#home"
+      className="hover:text-blue-400 hover:scale-110 hover:drop-shadow-[0_0_10px_#60a5fa] transition-all duration-300"
+    >
+      Home
+    </a>
 
-          <a href="#home" className="hover:text-blue-400 transition">
-            Home
-          </a>
+    <a
+      href="#about"
+      className="hover:text-blue-400 hover:scale-110 hover:drop-shadow-[0_0_10px_#60a5fa] transition-all duration-300"
+    >
+      About
+    </a>
 
-          <a href="#about" className="hover:text-blue-400 transition">
-            About
-          </a>
+    <a
+      href="#projects"
+      className="hover:text-blue-400 hover:scale-110 hover:drop-shadow-[0_0_10px_#60a5fa] transition-all duration-300"
+    >
+      Projects
+    </a>
 
-          <a href="#projects" className="hover:text-blue-400 transition">
-            Projects
-          </a>
+    <a
+      href="#skills"
+      className="hover:text-blue-400 hover:scale-110 hover:drop-shadow-[0_0_10px_#60a5fa] transition-all duration-300"
+    >
+      Skills
+    </a>
 
-          <a href="#skills" className="hover:text-blue-400 transition">
-            Skills
-          </a>
+    <a
+      href="#certificates"
+      className="hover:text-blue-400 hover:scale-110 hover:drop-shadow-[0_0_10px_#60a5fa] transition-all duration-300"
+    >
+      Certificates
+    </a>
 
-          <a href="#certificates" className="hover:text-blue-400 transition">
-            Certificates
-          </a>
+    <a
+      href="#contact"
+      className="hover:text-blue-400 hover:scale-110 hover:drop-shadow-[0_0_10px_#60a5fa] transition-all duration-300"
+    >
+      Contact
+    </a>
 
-          <a href="#contact" className="hover:text-blue-400 transition">
-            Contact
-          </a>
+  </div>
+</motion.nav>
 
-        </div>
+      
 
-      </nav>
+{/* Hero Section */}
+<section
+  id="home"
+  className="flex items-center justify-center px-6 py-24 min-h-screen"
+>
+  <motion.div
+    initial={{ opacity: 0, y: 60 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1 }}
+    className="text-center"
+  >
+    <img
+      src="/profile.jpg"
+      alt="Profile"
+      className="w-44 h-44 rounded-full mx-auto mb-8 object-cover border border-gray-500 shadow-2xl float-animation hover:scale-105 transition duration-500"
+    />
 
-      {/* Hero Section */}
-      <section
-        id="home"
-        className="flex items-center justify-center px-6 py-24"
+    <h1 className="text-7xl font-bold mb-4 hover:scale-105 transition duration-300">
+      Jayamini Dissanayake
+    </h1>
+
+    <TypeAnimation
+      sequence={[
+        "Computer Systems Engineering Student",
+        2000,
+        "Embedded Systems Developer",
+        2000,
+        "Robotics Enthusiast",
+        2000,
+        "Networking Engineer",
+        2000,
+      ]}
+      wrapper="h2"
+      speed={50}
+      repeat={Infinity}
+      className="text-4xl text-gray-400 mb-6"
+    />
+
+    <p className="max-w-3xl text-gray-500 mx-auto mb-10 text-lg">
+      I build embedded systems, networking projects,
+      robotics, and modern web applications.
+    </p>
+
+    <div className="flex flex-wrap gap-5 justify-center">
+      
+
+      <a
+        href="#contact"
+        className="px-7 py-3 bg-white text-black rounded-full hover:bg-gray-300 hover:scale-110 transition-all duration-300"
       >
+        Contact Me
+      </a>
 
-        <div className="text-center">
-
-          <img
-            src="/profile.jpg"
-            alt="Profile"
-            className="w-44 h-44 rounded-full mx-auto mb-8 object-cover border border-gray-500 shadow-2xl"
-          />
-
-          <h1 className="text-7xl font-bold mb-4">
-            Jayamini Dissanayake
-          </h1>
-
-          <h2 className="text-4xl text-gray-400 mb-6">
-            Computer Systems Engineering Student
-          </h2>
-
-          <p className="max-w-3xl text-gray-500 mx-auto mb-10 text-lg">
-            I build embedded systems, networking projects,
-            robotics, and modern web applications.
-          </p>
-
-          <div className="flex gap-5 justify-center">
-
-            <a
-              href="#about"
-              className="px-7 py-3 bg-[#112240] border border-gray-700 rounded-full hover:bg-[#1d3557] transition"
-            >
-              About Me
-            </a>
-
-            <a
-              href="#contact"
-              className="px-7 py-3 bg-white text-black rounded-full hover:bg-gray-300 transition"
-            >
-              Contact Me
-            </a>
-
-            <a
-              href="/Jayamini_Dissanayake.pdf"
-              download
-              className="px-7 py-3 bg-blue-500 rounded-full hover:bg-blue-600 transition"
-            >
-              Download CV
-            </a>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* About Section */}
-      <section
-        id="about"
-        className="px-10 py-24"
+      <a
+        href="/Jayamini_Dissanayake.pdf"
+        download
+        className="px-7 py-3 bg-blue-500 rounded-full hover:bg-blue-600 hover:scale-110 transition-all duration-300"
       >
+        Download CV
+      </a>
+    </div>
+  </motion.div>
+</section>
 
-        <div className="max-w-5xl mx-auto bg-[#0f172a] border border-gray-700 rounded-3xl p-12 shadow-xl">
+      <motion.section
+  id="about"
+  initial={{ opacity: 0, y: 80 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+  className="px-10 py-24"
+>
+  <div className="max-w-5xl mx-auto bg-[#0f172a] border border-gray-700 rounded-3xl p-12 shadow-xl hover:shadow-blue-500/20 hover:scale-[1.02] transition-all duration-500">
 
-          <h2 className="text-5xl font-bold mb-8 text-center">
-            About Me
-          </h2>
+    <div className="flex justify-center mb-8">
+  <motion.h2
+    initial={{ opacity: 0, x: -150 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{
+      duration: 0.8,
+      ease: "easeOut",
+    }}
+    viewport={{ once: true }}
+    className="text-5xl font-bold px-12 py-5 bg-[#0f172a] border border-gray-700 rounded-3xl shadow-xl hover:shadow-blue-500/20 hover:scale-105 transition-all duration-300"
+  >
+    About Me
+  </motion.h2>
+</div>
 
-          <p className="text-gray-400 text-xl leading-9 text-center max-w-4xl mx-auto">
-            I am a passionate Computer Systems Engineering student with a strong
-            interest in embedded systems, networking, robotics, and modern web
-            development. I enjoy building practical and innovative projects using
-            technologies such as Arduino, AVR microcontrollers, Cisco networking,
-            React, and modern programming tools.
-          </p>
+    <p className="text-gray-400 text-xl leading-9 text-center max-w-4xl mx-auto">
+      I am a passionate Computer Systems Engineering student with a strong
+      interest in embedded systems, networking, robotics, and modern web
+      development. I enjoy building practical and innovative projects using
+      technologies such as Arduino, AVR microcontrollers, Cisco networking,
+      React, and modern programming tools.
+    </p>
 
-        </div>
+    <div className="grid md:grid-cols-3 gap-6 mt-12">
 
-      </section>
+      <div className="bg-[#112240] p-6 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+        <h3 className="text-3xl font-bold text-blue-400">10+</h3>
+        <p className="text-gray-400">Projects</p>
+      </div>
+
+      <div className="bg-[#112240] p-6 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+        <h3 className="text-3xl font-bold text-blue-400">4+</h3>
+        <p className="text-gray-400">Technical Areas</p>
+      </div>
+
+      <div className="bg-[#112240] p-6 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+        <h3 className="text-3xl font-bold text-blue-400">2027</h3>
+        <p className="text-gray-400">Graduation</p>
+      </div>
+
+    </div>
+
+  </div>
+</motion.section>
 
       {/* Projects Section */}
-      <section
-        id="projects"
-        className="px-10 py-24"
-      >
+<section
+  id="projects"
+  className="px-10 py-24"
+>
+  <div className="max-w-6xl mx-auto">
 
-        <div className="max-w-6xl mx-auto">
-
-          <h2 className="text-5xl font-bold text-center mb-20">
-            Projects
-          </h2>
+    <div className="flex justify-center mb-20">
+      <motion.h2
+  initial={{ opacity: 0, x: -300 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{
+    duration: 0.5,
+    type: "spring",
+    stiffness: 50,
+  }}
+  viewport={{ once: true }}
+  className="text-5xl font-bold px-12 py-5 bg-[#0f172a] border border-gray-700 rounded-3xl"
+>
+  Projects
+</motion.h2>
+    </div>
 
 
 {/* 1st Year */}
@@ -145,7 +232,7 @@ function App() {
       <img
         src="/bot.jpg"
         alt="CradleBot"
-        className="w-full h-[220px] object-cover"
+        className="w-full h-[180px] object-cover"
       />
 
       <div className="p-5">
@@ -155,17 +242,32 @@ function App() {
         </h4>
 
         <p className="text-gray-400 leading-7 text-sm mb-5">
-          Designed and developed an automated smart cradle system capable of
-          detecting baby cries and initiating automatic rocking motion.
-          The project integrated sound and moisture sensors for real-time
-          infant monitoring while utilizing servo motor–based cradle movement
-          for smooth automated rocking.
+  Designed and developed an automated smart cradle system capable of
+  detecting baby cries and initiating automatic rocking motion using
+  Arduino, sensors, and servo motor control.
+</p>
 
-          An MP3 module was integrated to play soothing lullabies for infant
-          comfort. The embedded control logic was programmed using Arduino,
-          enabling real-time sensor processing, automation, and efficient
-          hardware–software interaction.
-        </p>
+{showCradleMore && (
+  <p className="text-gray-400 leading-7 text-sm mb-5">
+    The project integrated sound and moisture sensors for real-time
+    infant monitoring while utilizing servo motor–based cradle movement
+    for smooth automated rocking.
+
+    <br /><br />
+
+    An MP3 module was integrated to play soothing lullabies for infant
+    comfort. The embedded control logic was programmed using Arduino,
+    enabling real-time sensor processing, automation, and efficient
+    hardware–software interaction.
+  </p>
+)}
+
+<button
+  onClick={() => setShowCradleMore(!showCradleMore)}
+  className="text-blue-400 hover:text-blue-300 font-medium transition mb-4"
+>
+  {showCradleMore ? "Hide Details ←" : "View Details →"}
+</button>
 
         <div className="flex flex-wrap gap-2">
 
@@ -207,19 +309,32 @@ function App() {
         </h4>
 
         <p className="text-gray-400 leading-7 text-sm mb-5">
-          Designed and implemented an intelligent traffic light control system
-          using NE555 timer ICs and electronic components to simulate
-          automated road traffic management.
+  Developed an NE555 timer–based traffic light control system with
+  adjustable timing intervals, LED sequencing, and practical circuit
+  design implementation.
+</p>
 
-          The system controlled red, yellow, and green LED transitions with
-          adjustable timing intervals using potentiometers. Developed the
-          complete circuit design, breadboard implementation, soldering,
-          testing, and troubleshooting processes while applying digital
-          electronics and timing circuit principles.
+{showTrafficMore && (
+  <p className="text-gray-400 leading-7 text-sm mb-5">
+    The system controlled red, yellow, and green LED transitions with
+    adjustable timing intervals using potentiometers. Developed the
+    complete circuit design, breadboard implementation, soldering,
+    testing, and troubleshooting processes while applying digital
+    electronics and timing circuit principles.
 
-          The project improved understanding of sequential timing operations,
-          hardware circuit integration, and practical electronic system design.
-        </p>
+    <br /><br />
+
+    The project improved understanding of sequential timing operations,
+    hardware circuit integration, and practical electronic system design.
+  </p>
+)}
+
+<button
+  onClick={() => setShowTrafficMore(!showTrafficMore)}
+  className="text-blue-400 hover:text-blue-300 font-medium transition mb-4"
+>
+  {showTrafficMore ? "Hide Details ←" : "View Details →"}
+</button>
 
         <div className="flex flex-wrap gap-2">
 
@@ -276,14 +391,35 @@ function App() {
           Adaptive Modulation in Wireless Communication
         </h4>
 
-        <p className="text-gray-400 leading-9 text-lg mb-6">
-          Simulated and evaluated adaptive digital modulation techniques
-          under Rayleigh, Rician, and Lognormal fading channels using MATLAB.
+        <p className="text-gray-400 leading-7 text-sm mb-5">
+  Simulated adaptive digital communication systems in MATLAB to
+  evaluate BPSK performance under Rayleigh, Rician, and Lognormal
+  fading channels.
+</p>
 
-          The project analyzed BER vs SNR performance for BPSK modulation
-          with channel equalization to study communication reliability
-          under varying wireless channel conditions.
-        </p>
+{showModulationMore && (
+  <p className="text-gray-400 leading-7 text-sm mb-5">
+    The project analyzed Bit Error Rate (BER) versus Signal-to-Noise
+    Ratio (SNR) performance under different wireless channel models.
+    Adaptive modulation techniques and channel equalization methods
+    were implemented to improve communication reliability.
+
+    <br /><br />
+
+    MATLAB simulations were used to compare channel behavior,
+    evaluate system performance, and study the impact of fading
+    effects on digital communication systems. The project enhanced
+    understanding of wireless propagation, signal processing,
+    modulation techniques, and communication system design.
+  </p>
+)}
+
+<button
+  onClick={() => setShowModulationMore(!showModulationMore)}
+  className="text-blue-400 hover:text-blue-300 font-medium transition mb-4"
+>
+  {showModulationMore ? "Hide Details ←" : "View Details →"}
+</button>
 
         <div className="flex flex-wrap gap-3">
 
@@ -324,15 +460,36 @@ function App() {
           Pharmacy Management System
         </h4>
 
-        <p className="text-gray-400 leading-9 text-lg mb-6">
-          Developed a full-stack Pharmacy Management System using
-          Spring Boot, React, and MySQL for managing medicines,
-          prescriptions, inventory, and customer orders.
+        <p className="text-gray-400 leading-7 text-sm mb-5">
+  Developed a full-stack Pharmacy Management System using Spring Boot,
+  React, and MySQL to manage medicines, prescriptions, inventory,
+  customer orders, and pharmacy operations.
+</p>
 
-          Implemented secure authentication, inventory monitoring,
-          sales reporting, and an admin dashboard for efficient
-          pharmacy operations management.
-        </p>
+{showPharmacyMore && (
+  <p className="text-gray-400 leading-7 text-sm mb-5">
+    The system featured role-based user management for administrators,
+    pharmacists, and customers, secure authentication, inventory
+    management, prescription and order handling, sales reporting,
+    low-stock alerts, expiry monitoring, and administrative dashboards.
+
+    <br /><br />
+
+    RESTful APIs were developed using Spring Boot and tested with
+    Postman, while React was used to create responsive user interfaces.
+    MySQL was utilized for data storage and management. The project
+    improved understanding of full-stack development, database design,
+    API integration, authentication, and enterprise application
+    architecture.
+  </p>
+)}
+
+<button
+  onClick={() => setShowPharmacyMore(!showPharmacyMore)}
+  className="text-blue-400 hover:text-blue-300 font-medium transition mb-4"
+>
+  {showPharmacyMore ? "Hide Details ←" : "View Details →"}
+</button>
 
         <div className="flex flex-wrap gap-3">
 
@@ -365,35 +522,36 @@ function App() {
     <h4 className="text-2xl font-bold mb-5">
       Pharmacy & Medical Center Network Infrastructure Design
     </h4>
-      <p className="text-gray-400 leading-7 text-sm mb-4">
-    Designed a complete wired and wireless network infrastructure for a
-    pharmacy integrated with a medical center. The project focused on
-    providing reliable, secure, and high-speed connectivity to support
-    patient record management, prescription handling, communication
-    between departments, internet access, and file sharing within
-    the facility.
-  </p>
+      <p className="text-gray-400 leading-7 text-sm mb-5">
+  Designed a complete wired and wireless network infrastructure for a
+  pharmacy and medical center, focusing on secure, reliable, and
+  high-speed connectivity for healthcare operations.
+</p>
 
-  <p className="text-gray-400 leading-7 text-sm mb-4">
-    The network design included both logical and physical layouts using
-    a star topology for improved scalability, stability, and performance.
-    Networking devices such as routers, switches, wireless access points,
-    servers, and printers were connected using Cat6 UTP cabling and
-    Gigabit Ethernet links.
-  </p>
-
+{showNetworkMore && (
   <p className="text-gray-400 leading-7 text-sm mb-5">
-    Security features including VLAN configuration and firewall protection
-    were implemented to improve network security, traffic segmentation,
-    and efficient resource management. The project also included equipment
-    selection, floor planning, cabling design, Wi-Fi coverage planning,
-    and cost estimation.
+    Developed both logical and physical network designs using a star
+    topology to improve scalability, stability, and performance.
+    Integrated routers, switches, wireless access points, servers,
+    and printers using Cat6 UTP cabling and Gigabit Ethernet links.
 
-    Devices such as MikroTik routers, TP-Link smart switches, Ubiquiti
-    access points, UPS systems, and patch panels were selected based on
-    performance, reliability, and scalability, creating a future-ready
-    network solution for healthcare environments.
+    <br /><br />
+
+    Implemented VLAN segmentation, firewall protection, Wi-Fi coverage
+    planning, floor planning, structured cabling, and equipment
+    selection. Devices including MikroTik routers, TP-Link smart
+    switches, Ubiquiti access points, UPS systems, and patch panels
+    were selected to create a secure and future-ready healthcare
+    network infrastructure.
   </p>
+)}
+
+<button
+  onClick={() => setShowNetworkMore(!showNetworkMore)}
+  className="text-blue-400 hover:text-blue-300 font-medium transition mb-4"
+>
+  {showNetworkMore ? "Hide Details ←" : "View Details →"}
+</button>
 
 
     <div className="flex flex-wrap gap-3">
@@ -432,21 +590,35 @@ function App() {
       Research Study on Vehicle Purchasing Trends in Sri Lanka
     </h4>
 
-    <p className="text-gray-400 leading-8 text-lg mb-5">
-      Conducted a research study to analyze how recent tax increases on
-      brand-new vehicles influence purchasing decisions among Sri Lankan
-      consumers. The research focused on identifying whether people prefer
-      new or pre-owned vehicles under changing economic and taxation
-      conditions.
-    </p>
+    <p className="text-gray-400 leading-7 text-sm mb-5">
+  Conducted a research study on the impact of vehicle taxation policies
+  on consumer purchasing decisions in Sri Lanka, focusing on preferences
+  between new and pre-owned vehicles.
+</p>
 
-    <p className="text-gray-400 leading-8 text-lg mb-6">
-      Designed and distributed a structured survey to collect data related
-      to affordability, resale value, fuel efficiency, maintenance cost,
-      environmental concerns, and government tax policies. The collected
-      responses were analyzed using probability and statistical methods to
-      identify consumer behavior patterns and market trends in Sri Lanka.
-    </p>
+{showResearchMore && (
+  <p className="text-gray-400 leading-7 text-sm mb-5">
+    Designed and distributed a structured survey to collect data on
+    affordability, resale value, fuel efficiency, maintenance costs,
+    environmental concerns, and government tax policies affecting
+    vehicle purchasing behavior.
+
+    <br /><br />
+
+    Applied probability and statistical analysis techniques to evaluate
+    survey responses, identify consumer behavior patterns, and examine
+    market trends. The research provided insights into how taxation and
+    economic conditions influence vehicle purchasing decisions among
+    Sri Lankan consumers.
+  </p>
+)}
+
+<button
+  onClick={() => setShowResearchMore(!showResearchMore)}
+  className="text-blue-400 hover:text-blue-300 font-medium transition mb-4"
+>
+  {showResearchMore ? "Hide Details ←" : "View Details →"}
+</button>
 
     <div className="flex flex-wrap gap-3">
 
@@ -490,25 +662,36 @@ function App() {
       AM Broadcast Receiver – Audio Output Circuit
     </h4>
 
-    <p className="text-gray-400 leading-8 text-lg mb-5">
-      Designed, built, and tested the audio output stage of a basic
-      AM broadcast receiver using fully discrete analog components.
-      The project was developed as part of Analog Electronics practical
-      work together with Sasindu Lakshitha.
-    </p>
+    <p className="text-gray-400 leading-7 text-sm mb-5">
+  Designed and implemented the audio output stage of an AM broadcast
+  receiver using discrete analog components, focusing on signal
+  amplification, filtering, and audio output performance.
+</p>
 
-    <p className="text-gray-400 leading-8 text-lg mb-6">
-      The system included RC-based high-pass and low-pass filters,
-      a common-emitter BJT amplifier, and an emitter-follower buffer
-      stage for signal isolation and amplification. The complete
-      circuit was implemented on a dot board without using op-amps,
-      integrated circuits, or transformers.
+{showAMMore && (
+  <p className="text-gray-400 leading-7 text-sm mb-5">
+    The project included RC-based high-pass and low-pass filters,
+    a common-emitter BJT amplifier, and an emitter-follower buffer
+    stage for signal isolation and amplification. The complete
+    circuit was constructed on a dot board without using op-amps,
+    integrated circuits, or transformers.
 
-      Oscilloscope testing and signal analysis were carried out to
-      verify cutoff frequencies, voltage gain, signal amplification,
-      and audio clarity while applying BJT small-signal analysis
-      and analog circuit design principles.
-    </p>
+    <br /><br />
+
+    Oscilloscope testing and signal analysis were performed to verify
+    cutoff frequencies, voltage gain, signal amplification, and audio
+    clarity. The project strengthened practical knowledge of BJT
+    small-signal analysis, analog circuit design, and electronic
+    circuit implementation.
+  </p>
+)}
+
+<button
+  onClick={() => setShowAMMore(!showAMMore)}
+  className="text-blue-400 hover:text-blue-300 font-medium transition mb-4"
+>
+  {showAMMore ? "Hide Details ←" : "View Details →"}
+</button>
 
     <div className="flex flex-wrap gap-3">
 
@@ -548,23 +731,35 @@ function App() {
     Simulation and Evaluation of Adaptive Modulation under Varying Wireless Channel Conditions
   </h4>
 
-  <p className="text-gray-400 leading-8 text-lg mb-5">
-    Conducted a research and simulation study on adaptive wireless
-    communication systems using MATLAB. The project focused on
-    dynamically switching between BPSK, QPSK, and 16-QAM modulation
-    techniques according to wireless channel quality in order to
-    balance communication reliability and spectral efficiency.
-  </p>
+  <p className="text-gray-400 leading-7 text-sm mb-5">
+  Developed and simulated an adaptive wireless communication system
+  in MATLAB using BPSK, QPSK, and 16-QAM modulation techniques to
+  improve communication reliability and spectral efficiency.
+</p>
 
-  <p className="text-gray-400 leading-8 text-lg mb-6">
-    The system was evaluated under Rayleigh and Rician fading
-    environments using BER vs SNR performance analysis. Threshold-based
-    adaptive logic was implemented to automatically select the most
-    suitable modulation technique based on channel conditions. The
-    research improved understanding of adaptive communication systems,
-    fading channels, modulation techniques, and wireless performance
-    optimization used in modern LTE and Wi-Fi technologies.
+{showAdaptiveMore && (
+  <p className="text-gray-400 leading-7 text-sm mb-5">
+    The system dynamically selected the most suitable modulation
+    scheme based on wireless channel quality using threshold-based
+    adaptive logic. Performance was evaluated under Rayleigh and
+    Rician fading environments through BER versus SNR analysis.
+
+    <br /><br />
+
+    MATLAB simulations were used to compare modulation performance,
+    study fading channel effects, and optimize communication
+    efficiency. The project enhanced understanding of adaptive
+    communication systems, wireless propagation, modulation
+    techniques, and modern LTE and Wi-Fi communication technologies.
   </p>
+)}
+
+<button
+  onClick={() => setShowAdaptiveMore(!showAdaptiveMore)}
+  className="text-blue-400 hover:text-blue-300 font-medium transition mb-4"
+>
+  {showAdaptiveMore ? "Hide Details ←" : "View Details →"}
+</button>
 
   <div className="flex flex-wrap gap-3">
 
@@ -606,22 +801,36 @@ function App() {
       Design and Implementation of a 1-Digit Decimal Up Counter Using D Flip-Flops
     </h4>
 
-    <p className="text-gray-400 leading-8 text-lg mb-5">
-      Designed and implemented a 1-digit decimal up counter using
-      74HC74 D flip-flop ICs configured as an asynchronous ripple counter.
-      The system automatically counted from 0 to 9 and reset back to 0
-      while displaying the output on a seven-segment display through
-      a BCD-to-7-segment decoder.
-    </p>
+    <p className="text-gray-400 leading-7 text-sm mb-5">
+  Designed and implemented a 1-digit decimal up counter using 74HC74
+  D flip-flops, featuring automatic counting from 0 to 9 and display
+  output through a seven-segment display.
+</p>
 
-    <p className="text-gray-400 leading-8 text-lg mb-6">
-      The project included Proteus simulation, EasyEDA PCB design,
-      PCB layout generation, and enclosure modeling. Additional features
-      such as pause/resume and asynchronous reset controls were implemented
-      using push buttons. The design improved understanding of digital
-      logic design, flip-flop operation, PCB routing, signal timing,
-      troubleshooting, and practical hardware implementation.
-    </p>
+{showCounterMore && (
+  <p className="text-gray-400 leading-7 text-sm mb-5">
+    The counter was configured as an asynchronous ripple counter with
+    automatic reset functionality after reaching the decimal count limit.
+    A BCD-to-7-segment decoder was used to convert binary outputs into
+    readable decimal digits.
+
+    <br /><br />
+
+    The project included Proteus simulation, EasyEDA PCB design,
+    PCB layout generation, and enclosure modeling. Additional
+    pause/resume and asynchronous reset controls were implemented
+    using push buttons. The project strengthened knowledge of
+    digital logic design, flip-flop operation, PCB development,
+    timing analysis, and practical hardware implementation.
+  </p>
+)}
+
+<button
+  onClick={() => setShowCounterMore(!showCounterMore)}
+  className="text-blue-400 hover:text-blue-300 font-medium transition mb-4"
+>
+  {showCounterMore ? "Hide Details ←" : "View Details →"}
+</button>
 
     <div className="flex flex-wrap gap-3">
 
@@ -682,20 +891,35 @@ function App() {
           PID-Controlled DC Motor Stabilization System
         </h4>
 
-        <p className="text-gray-400 leading-8 text-lg mb-6">
-          Designed and implemented a real-time PID-controlled DC motor
-          stabilization system using Raspberry Pi 4 and a custom PCB.
-          The project focused on motor modelling, PID tuning,
-          encoder feedback measurement, disturbance rejection,
-          and real-time speed control analysis.
-        </p>
+        <p className="text-gray-400 leading-7 text-sm mb-5">
+  Designed and implemented a real-time PID-controlled DC motor
+  stabilization system using Raspberry Pi 4, encoder feedback,
+  and a custom PCB for precise speed regulation.
+</p>
 
-        <p className="text-gray-400 leading-8 text-lg mb-6">
-          The system used a 12V brushed DC motor, optical rotary encoder,
-          L298N motor driver, and Raspberry Pi–based real-time PID control
-          algorithm to achieve stable motor speed regulation with minimum
-          settling time and low steady-state error.
-        </p>
+{showPIDMore && (
+  <p className="text-gray-400 leading-7 text-sm mb-5">
+    The project focused on DC motor modelling, PID controller tuning,
+    encoder feedback acquisition, disturbance rejection, and real-time
+    speed control analysis to achieve stable motor performance.
+
+    <br /><br />
+
+    The system utilized a 12V brushed DC motor, optical rotary encoder,
+    L298N motor driver, and a Raspberry Pi–based control algorithm.
+    Performance was evaluated using settling time, overshoot, steady-state
+    error, and response stability, improving understanding of control
+    systems, embedded programming, feedback control, and real-time
+    engineering applications.
+  </p>
+)}
+
+<button
+  onClick={() => setShowPIDMore(!showPIDMore)}
+  className="text-blue-400 hover:text-blue-300 font-medium transition mb-4"
+>
+  {showPIDMore ? "Hide Details ←" : "View Details →"}
+</button>
 
         <div className="flex flex-wrap gap-3">
 
@@ -740,22 +964,34 @@ function App() {
       Autonomous Line Following & Parking Arduino Car
     </h4>
 
-    <p className="text-gray-400 leading-8 text-lg mb-6">
-      Designed and developed a battery-powered autonomous Arduino car
-      capable of following a rounded rectangular track and automatically
-      parking in a selected parking bay using sensor-driven navigation.
-      The project focused on real-time embedded control, autonomous
-      movement, motor control, and intelligent parking behavior.
-    </p>
+    <p className="text-gray-400 leading-7 text-sm mb-5">
+  Developed an autonomous Arduino-based vehicle capable of line
+  following and automatic parking using sensor-driven navigation
+  and real-time embedded control.
+</p>
 
-    <p className="text-gray-400 leading-8 text-lg mb-6">
-      The system used IR sensors for line tracking and parking bay
-      detection while implementing real-time decision making and
-      motor control entirely using AVR Assembly language on the
-      Arduino Uno platform. The project also involved chassis
-      assembly, sensor integration, testing, debugging, and
-      autonomous navigation analysis.
-    </p>
+{showCarMore && (
+  <p className="text-gray-400 leading-7 text-sm mb-5">
+    The vehicle was designed to follow a rounded rectangular track
+    and automatically park in a selected parking bay using IR sensors
+    for line tracking and parking space detection.
+
+    <br /><br />
+
+    Real-time decision making and motor control were implemented
+    entirely in AVR Assembly language on the Arduino Uno platform.
+    The project also involved chassis assembly, sensor integration,
+    testing, debugging, and performance evaluation of autonomous
+    navigation and intelligent parking algorithms.
+  </p>
+)}
+
+<button
+  onClick={() => setShowCarMore(!showCarMore)}
+  className="text-blue-400 hover:text-blue-300 font-medium transition mb-4"
+>
+  {showCarMore ? "Hide Details ←" : "View Details →"}
+</button>
 
     <div className="flex flex-wrap gap-3">
 
@@ -803,21 +1039,34 @@ function App() {
       Zabbix Enterprise Monitoring System
     </h4>
 
-    <p className="text-gray-400 leading-8 text-lg mb-6">
-      Designed and implemented a real-time enterprise monitoring
-      environment using Zabbix Server on Ubuntu and a remote
-      CentOS client machine. The project focused on system
-      monitoring, network monitoring, server administration,
-      performance analysis, and troubleshooting in Linux environments.
-    </p>
+    <p className="text-gray-400 leading-7 text-sm mb-5">
+  Implemented a real-time monitoring environment using Zabbix Server,
+  Ubuntu, and CentOS to monitor system performance, network activity,
+  and server health in Linux-based environments.
+</p>
 
-    <p className="text-gray-400 leading-8 text-lg mb-6">
-      Configured firewall rules, SNMP communication, Zabbix agents,
-      and monitoring dashboards while resolving connectivity,
-      synchronization, and performance-related issues. Stress testing,
-      trigger validation, and live alert monitoring were performed
-      to evaluate system reliability and real-time monitoring accuracy.
-    </p>
+{showZabbixMore && (
+  <p className="text-gray-400 leading-7 text-sm mb-5">
+    Configured Zabbix Server, Zabbix Agents, SNMP communication,
+    firewall rules, and monitoring dashboards to collect and analyze
+    system and network performance metrics.
+
+    <br /><br />
+
+    Performed troubleshooting, stress testing, trigger validation,
+    alert configuration, and live monitoring to evaluate system
+    reliability and monitoring accuracy. The project enhanced
+    knowledge of Linux server administration, network monitoring,
+    performance analysis, and enterprise monitoring solutions.
+  </p>
+)}
+
+<button
+  onClick={() => setShowZabbixMore(!showZabbixMore)}
+  className="text-blue-400 hover:text-blue-300 font-medium transition mb-4"
+>
+  {showZabbixMore ? "Hide Details ←" : "View Details →"}
+</button>
 
     <div className="flex flex-wrap gap-3">
 
@@ -860,12 +1109,12 @@ function App() {
           {/* 4th Year */}
           <div>
 
-            <h3 className="text-5xl font-bold text-blue-400 mb-10">
+            <h3 className="text-4xl font-bold text-blue-400 mb-10">
               4th Year Projects
             </h3>
 
             <div className="bg-[#0f172a] border border-gray-700 rounded-3xl p-12 text-center text-gray-400 text-2xl">
-              Final year research project coming soon...
+              Currently progressing through the 3rd year of the Computer Systems Engineering degree. The Final Year Research Project will be added here once the research topic is finalized.
             </div>
 
           </div>
@@ -883,9 +1132,20 @@ function App() {
 
   <div className="max-w-6xl mx-auto">
 
-    <h2 className="text-5xl font-bold text-center mb-16">
-      Technical Skills
-    </h2>
+    <div className="flex justify-center mb-16">
+  <motion.h2
+    initial={{ opacity: 0, x: -250 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{
+      duration: 1.5,
+      ease: "easeOut",
+    }}
+    viewport={{ once: true }}
+    className="text-5xl font-bold px-12 py-5 bg-[#0f172a] border border-gray-700 rounded-3xl shadow-xl hover:shadow-blue-500/20 hover:scale-105 transition-all duration-300"
+  >
+    Technical Skills
+  </motion.h2>
+</div>
 
     <div className="grid md:grid-cols-2 gap-8">
 
@@ -1112,9 +1372,20 @@ function App() {
 
   <div className="max-w-7xl mx-auto">
 
-    <h2 className="text-5xl font-bold text-center mb-16">
-      Certificates
-    </h2>
+    <div className="flex justify-center mb-16">
+  <motion.h2
+    initial={{ opacity: 0, x: -150 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{
+      duration: 0.8,
+      ease: "easeOut",
+    }}
+    viewport={{ once: true }}
+    className="text-5xl font-bold px-12 py-5 bg-[#0f172a] border border-gray-700 rounded-3xl shadow-xl hover:shadow-blue-500/20 hover:scale-105 transition-all duration-300"
+  >
+    Certifications
+  </motion.h2>
+</div>
 
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
@@ -1453,9 +1724,20 @@ function App() {
 
   <div className="max-w-5xl mx-auto bg-[#0f172a] border border-gray-700 rounded-3xl p-12">
 
-    <h2 className="text-5xl font-bold text-center mb-6">
-      Contact Me
-    </h2>
+    <div className="flex justify-center mb-8">
+  <motion.h2
+    initial={{ opacity: 0, x: -250 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{
+      duration: 1,
+      ease: "linear"
+    }}
+    viewport={{ once: true }}
+    className="text-5xl font-bold px-12 py-5 bg-[#112240] border border-gray-700 rounded-3xl shadow-xl"
+  >
+    Contact Me
+  </motion.h2>
+</div>
 
     <p className="text-gray-400 text-center mb-12 text-lg">
       Feel free to contact me for internships, collaborations,
