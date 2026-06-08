@@ -3,6 +3,22 @@ import { TypeAnimation } from "react-type-animation";
 import { useState } from "react";
 import { FaGraduationCap } from "react-icons/fa";
 import { FaSchool } from "react-icons/fa";
+import {
+  FaPhone,
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+  FaMapMarkerAlt,
+  FaBriefcase
+} from "react-icons/fa";
+import {
+  FaCode,
+  FaMicrochip,
+  FaNetworkWired,
+  FaCogs,
+  FaTools
+} from "react-icons/fa";
+
 function App() {
   const [showCradleMore, setShowCradleMore] = useState(false);
   const [showTrafficMore, setShowTrafficMore] = useState(false);
@@ -100,30 +116,20 @@ function App() {
     />
 
     <h1 className="text-7xl font-bold mb-4 hover:scale-105 transition duration-300">
-      Jayamini Dissanayake
-    </h1>
+  Jayamini Dissanayake
+</h1>
 
-    <TypeAnimation
-      sequence={[
-        "Computer Systems Engineering Student",
-        2000,
-        "Embedded Systems Developer",
-        2000,
-        "Robotics Enthusiast",
-        2000,
-        "Networking Engineer",
-        2000,
-      ]}
-      wrapper="h2"
-      speed={50}
-      repeat={Infinity}
-      className="text-4xl text-gray-400 mb-6"
-    />
+<h2 className="text-3xl md:text-4xl text-gray-300 mb-2">
+  Computer Systems Engineering Undergraduate
+</h2>
 
-    <p className="max-w-3xl text-gray-500 mx-auto mb-10 text-lg">
-      I build embedded systems, networking projects,
-      robotics, and modern web applications.
-    </p>
+<h3 className="text-xl md:text-2xl text-blue-400 mb-6">
+  Embedded Systems | Networking | Software Engineering
+</h3>
+
+<p className="max-w-3xl text-gray-400 mx-auto mb-10 text-lg">
+  Passionate about embedded systems, networking, software engineering, and developing innovative technology solutions that solve real-world problems.
+</p>
 
     <div className="flex flex-wrap gap-5 justify-center">
       
@@ -136,12 +142,30 @@ function App() {
       </a>
 
       <a
-        href="/Jayamini_Dissanayake_Resume.pdf"
+        href="/Jayamini_Dissanayake_CV.pdf"
         download
         className="px-7 py-3 bg-blue-500 rounded-full hover:bg-blue-600 hover:scale-110 transition-all duration-300"
       >
-        Download CV
+        View Resume
       </a>
+
+       <a
+    href="https://github.com/dissaanayake-23"
+    target="_blank"
+    rel="noreferrer"
+    className="px-7 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 hover:scale-110 transition-all duration-300"
+  >
+    GitHub
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/jayamini-dissanayake-6806812b6/"
+    target="_blank"
+    rel="noreferrer"
+    className="px-7 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 hover:scale-110 transition-all duration-300"
+  >
+    LinkedIn
+  </a>
     </div>
   </motion.div>
 </section>
@@ -1236,9 +1260,12 @@ function App() {
       {/* Programming */}
       <div className="bg-[#0f172a] border border-gray-700 rounded-3xl p-8">
 
-        <h3 className="text-2xl font-bold text-blue-400 mb-6">
-          Programming & Development
-        </h3>
+        <div className="flex items-center gap-3 mb-6">
+  <FaCode className="text-blue-400 text-3xl" />
+  <h3 className="text-2xl font-bold text-blue-400">
+    Programming & Development
+  </h3>
+</div>
 
         <div className="flex flex-wrap gap-3">
 
@@ -1293,9 +1320,12 @@ function App() {
       {/* Embedded Systems */}
       <div className="bg-[#0f172a] border border-gray-700 rounded-3xl p-8">
 
-        <h3 className="text-2xl font-bold text-blue-400 mb-6">
-          Embedded Systems & Electronics
-        </h3>
+        <div className="flex items-center gap-3 mb-6">
+  <FaMicrochip className="text-blue-400 text-3xl" />
+  <h3 className="text-2xl font-bold text-blue-400">
+    Embedded Systems & Electronics
+  </h3>
+</div>
 
         <div className="flex flex-wrap gap-3">
 
@@ -1334,9 +1364,12 @@ function App() {
       {/* Control Systems */}
       <div className="bg-[#0f172a] border border-gray-700 rounded-3xl p-8">
 
-        <h3 className="text-2xl font-bold text-blue-400 mb-6">
-          Control Systems
-        </h3>
+        <div className="flex items-center gap-3 mb-6">
+  <FaCogs className="text-blue-400 text-3xl" />
+  <h3 className="text-2xl font-bold text-blue-400">
+    Control Systems
+  </h3>
+</div>
 
         <div className="flex flex-wrap gap-3">
 
@@ -1363,9 +1396,12 @@ function App() {
       {/* Networking */}
       <div className="bg-[#0f172a] border border-gray-700 rounded-3xl p-8">
 
-        <h3 className="text-2xl font-bold text-blue-400 mb-6">
-          Networking & Systems
-        </h3>
+        <div className="flex items-center gap-3 mb-6">
+  <FaNetworkWired className="text-blue-400 text-3xl" />
+  <h3 className="text-2xl font-bold text-blue-400">
+    Networking & Systems
+  </h3>
+</div>
 
         <div className="flex flex-wrap gap-3">
 
@@ -1400,9 +1436,12 @@ function App() {
       {/* Tools */}
       <div className="bg-[#0f172a] border border-gray-700 rounded-3xl p-8 md:col-span-2">
 
-        <h3 className="text-2xl font-bold text-blue-400 mb-6">
-          Tools & Platforms
-        </h3>
+        <div className="flex items-center gap-3 mb-6">
+  <FaTools className="text-blue-400 text-3xl" />
+  <h3 className="text-2xl font-bold text-blue-400">
+    Tools & Platforms
+  </h3>
+</div>
 
         <div className="flex flex-wrap gap-3">
 
@@ -1824,76 +1863,117 @@ function App() {
 </div>
 
     <p className="text-gray-400 text-center mb-12 text-lg">
-      Feel free to contact me for internships, collaborations,
-      networking opportunities, and software or embedded systems projects.
+      Feel free to contact me regarding internships, collaborations, software engineering, embedded systems, networking projects, and professional opportunities.
     </p>
 
     <div className="grid md:grid-cols-2 gap-8">
 
       {/* Phone */}
-      <div className="bg-[#112240] border border-gray-700 rounded-2xl p-6">
+<div className="bg-[#112240] border border-gray-700 rounded-2xl p-6">
 
-        <h3 className="text-2xl font-bold text-blue-400 mb-3">
-          Phone
-        </h3>
+  <div className="flex items-center gap-3 mb-3">
+    <FaPhone className="text-blue-400 text-3xl" />
+    <h3 className="text-2xl font-bold text-blue-400">
+      Phone
+    </h3>
+  </div>
 
-        <p className="text-gray-300">
-          +94 76 836 8986
-        </p>
+  <p className="text-gray-300">
+    +94 76 836 8986
+  </p>
 
-      </div>
+</div>
 
       {/* Email */}
-      <div className="bg-[#112240] border border-gray-700 rounded-2xl p-6">
+<div className="bg-[#112240] border border-gray-700 rounded-2xl p-6">
 
-        <h3 className="text-2xl font-bold text-blue-400 mb-3">
-          Email
-        </h3>
+  <div className="flex items-center gap-3 mb-3">
+    <FaEnvelope className="text-blue-400 text-3xl" />
+    <h3 className="text-2xl font-bold text-blue-400">
+      Email
+    </h3>
+  </div>
 
-        <a
-          href="mailto:jayaminitharushika637@gmail.com"
-          className="text-gray-300 hover:text-blue-400 transition"
-        >
-          jayaminitharushika637@gmail.com
-        </a>
+  <a
+    href="mailto:jayaminitharushika637@gmail.com"
+    className="text-gray-300 hover:text-blue-400 transition"
+  >
+    jayaminitharushika637@gmail.com
+  </a>
 
-      </div>
+</div>
 
       {/* GitHub */}
-      <div className="bg-[#112240] border border-gray-700 rounded-2xl p-6">
+<div className="bg-[#112240] border border-gray-700 rounded-2xl p-6">
 
-        <h3 className="text-2xl font-bold text-blue-400 mb-3">
-          GitHub
-        </h3>
+  <div className="flex items-center gap-3 mb-3">
+    <FaGithub className="text-blue-400 text-3xl" />
+    <h3 className="text-2xl font-bold text-blue-400">
+      GitHub
+    </h3>
+  </div>
 
-        <a
-          href="https://github.com/dissaanayake-23"
-          target="_blank"
-          rel="noreferrer"
-          className="text-gray-300 hover:text-blue-400 transition"
-        >
-          github.com/dissaanayake-23
-        </a>
+  <a
+    href="https://github.com/dissaanayake-23"
+    target="_blank"
+    rel="noreferrer"
+    className="text-gray-300 hover:text-blue-400 transition"
+  >
+    View GitHub Profile
+  </a>
 
-      </div>
+</div>
 
       {/* LinkedIn */}
-      <div className="bg-[#112240] border border-gray-700 rounded-2xl p-6">
+<div className="bg-[#112240] border border-gray-700 rounded-2xl p-6">
 
-        <h3 className="text-2xl font-bold text-blue-400 mb-3">
-          LinkedIn
-        </h3>
+  <div className="flex items-center gap-3 mb-3">
+    <FaLinkedin className="text-blue-400 text-3xl" />
+    <h3 className="text-2xl font-bold text-blue-400">
+      LinkedIn
+    </h3>
+  </div>
 
-        <a
-          href="https://www.linkedin.com/in/jayamini-dissanayake-6806812b6/"
-          target="_blank"
-          rel="noreferrer"
-          className="text-gray-300 hover:text-blue-400 transition"
-        >
-          LinkedIn Profile
-        </a>
+  <a
+    href="https://www.linkedin.com/in/jayamini-dissanayake-6806812b6/"
+    target="_blank"
+    rel="noreferrer"
+    className="text-gray-300 hover:text-blue-400 transition"
+  >
+    View LinkedIn Profile
+  </a>
 
-      </div>
+</div>
+      {/* Location */}
+<div className="bg-[#112240] border border-gray-700 rounded-2xl p-6">
+
+  <div className="flex items-center gap-3 mb-3">
+    <FaMapMarkerAlt className="text-blue-400 text-3xl" />
+    <h3 className="text-2xl font-bold text-blue-400">
+      Location
+    </h3>
+  </div>
+
+  <p className="text-gray-300">
+    Colombo, Sri Lanka
+  </p>
+
+</div>
+{/* Availability */}
+<div className="bg-[#112240] border border-gray-700 rounded-2xl p-6">
+
+  <div className="flex items-center gap-3 mb-3">
+    <FaBriefcase className="text-blue-400 text-3xl" />
+    <h3 className="text-2xl font-bold text-blue-400">
+      Availability
+    </h3>
+  </div>
+
+  <p className="text-gray-300">
+    Open to Internship Opportunities
+  </p>
+
+</div>
 
     </div>
 
